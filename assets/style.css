@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "SF Pro Display";
+  src: url(fonts/SFProDisplay-Regular.woff);
+}
+
 :root {
   --primary-color: #ffffff;
   --bg-primary: #000000;
@@ -18,7 +23,7 @@
   background: url(/assets/images/Background.png);
   background-position: center;
   background-size: cover;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,12 +41,13 @@
   font-size: 48px;
   margin-bottom: 36px;
   font-weight: 700;
+  line-height: 48px;
 }
 
 .wrapper p {
   color: var(--primary-color);
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 48px;
   line-height: 24px;
 }
@@ -57,6 +63,8 @@
   background-color: var(--bg-primary);
   border: 2px solid var(--border-color);
   border-radius: 16px;
+  color: var(--primary-color);
+  outline: none;
 }
 
 .form-box input::placeholder {
@@ -86,6 +94,7 @@
   font-weight: 700;
   margin-top: 8px;
   margin-bottom: 48px;
+  line-height: 20px;
 }
 
 .buttons {
@@ -95,4 +104,36 @@
   height: 56px;
   width: 343px;
   padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1400px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .wrapper h1 {
+    font-size: 40px;
+  }
+
+  .wrapper p {
+    font-size: 20px;
+  }
+
+  .form-box {
+    display: block;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .input-handle input {
+    width: 100%;
+  }
+
+  .wrapper button {
+    margin: 0 auto;
+  }
 }
