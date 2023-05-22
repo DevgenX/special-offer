@@ -57,7 +57,7 @@
   color: var(--primary-color);
   font-size: 24px;
   font-weight: 500;
-  margin-bottom: 48px;
+  margin-bottom: 2rem;
   line-height: 24px;
 }
 
@@ -81,15 +81,16 @@
 }
 
 .form-box input:hover {
+  border-color: #007bff;
 }
 
-.info-div {
+.info-div-input {
   display: flex;
   justify-content: space-between;
   margin-bottom: 12px;
 }
 
-.info-div input {
+.info-div-input input {
   flex-grow: 1;
   height: 56px;
   width: 343px;
@@ -110,15 +111,16 @@
 }
 
 .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 16px;
   color: var(--bg-primary);
   font-size: 16px;
+  font-weight: 700;
   height: 56px;
   width: 343px;
   padding: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .buttons:hover {
@@ -136,25 +138,38 @@
   background-color: var(--bg-secondary);
   color: var(--primary-color);
 }
-
 @media screen and (max-width: 1400px) {
   .wrapper {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+
   .wrapper h1 {
     font-size: 40px;
+    margin-bottom: 12px;
   }
 
   .wrapper p {
     font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .form-box {
     display: block;
     padding: 20px;
-    width: 100%;
+  }
+
+  .info-div-input {
+    margin-bottom: 12px;
+  }
+
+  .spacer {
+    padding: 0.5rem;
+  }
+
+  .info-div-input input {
+    margin: 0;
   }
 
   .input-handle input {
